@@ -1,3 +1,4 @@
+// Programa para agregar datos de empleados, al elegir la opción 'Fin' el array se mostrará en la consola.
 let empleados = []
 
 class Empleado{
