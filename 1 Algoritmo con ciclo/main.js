@@ -7,10 +7,6 @@ let repeticion = Number(
 );
 let contador = 1;
 
-// for(let i=0; i<repeticion;i++)
-// {
-//     console.log(numero)
-// }
 
 //Inicia ciclo
 if (Number.isInteger(numero) && Number.isInteger(repeticion)) {
@@ -21,8 +17,3 @@ if (Number.isInteger(numero) && Number.isInteger(repeticion)) {
 } else {
   alert("Uno de los datos ingresados no es un número");
 }
-
-// while (!/^[0-9]+$/.test(repeticion)) {
-//     alert("Uno de los datos ingresados no es un número");
-//     repeticion = prompt("Ingresa un número:");
-// }
