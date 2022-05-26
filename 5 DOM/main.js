@@ -5,7 +5,7 @@ const apellido = prompt("Ingrese su apellido")
 saludo.innerHTML = `<b>¡Hola, ${nombre} ${apellido}!</b>`
 
 
-class Usuario {
+class Empleado {
     constructor(nombre, apellido, edad, ciudad) {
         this.nombre = nombre
         this.apellido = apellido
@@ -14,13 +14,13 @@ class Usuario {
     }
 }
 
-const usuario1 = new Usuario("Analia", "Morales", 24, "Villa Lynch");
-const usuario2 = new Usuario("Noelia Melina", "Lopez", 20, "Villa del Parque");
-const usuario3 = new Usuario("Florencia", "Gomez", 21, "Villa Devoto");
+const empleado1 = new Empleado("Analia", "Morales", 24, "Villa Lynch");
+const empleado2 = new Empleado("Noelia Melina", "Lopez", 20, "Villa del Parque");
+const empleado3 = new Empleado("Florencia", "Gomez", 21, "Villa Devoto");
 
-function listadoUsuarios() {
+function listadoEmpleados() {
 
-    let usuarios = [usuario1, usuario2, usuario3]
+    let empleados = [empleado1, empleado2, empleado3]
 
     mostMenu()
 
@@ -29,21 +29,21 @@ function listadoUsuarios() {
 
         while (opcion !== 4) {
 
-            opcion = Number(prompt(`Seleccione una opción:   1. Agregar Usuario
-                                    2. Listar Usuarios
-                                    3. Eliminar Usuario
+            opcion = Number(prompt(`Seleccione una opción:   1. Agregar empleado
+                                    2. Listar empleado
+                                    3. Eliminar empleado
                                     4. Finalizar`))
             switch (opcion) {
                 case 1: {
-                    agregarUsuario()
+                    agregarEmpleado()
                     break
                 }
                 case 2: {
-                    listarUsuarios()
+                    listarEmpleados()
                     break
                 }
                 case 3: {
-                    eliminarUsuario()
+                    eliminarEmpleado()
                     break
                 }
                 case 4: {
@@ -54,49 +54,49 @@ function listadoUsuarios() {
         }
     }
 
-    function agregarUsuario() {
+    function agregarEmpleado() {
         let nombre = prompt("Ingrese su nombre")
         let apellido = prompt("Ingrese su apellido")
         let edad = prompt("Ingrese su edad")
         let ciudad = prompt("Ingrese su ciudad")
-        let usuario = new Usuario(nombre, apellido, edad, ciudad)
-        usuarios.push(usuario)
+        let empleado = new Empleado(nombre, apellido, edad, ciudad)
+        empleados.push(empleado)
     }
 
-    function listarUsuarios() {
-        let miLista = document.querySelector("#listaUsuarios");
+    function listarEmpleados() {
+        let miLista = document.querySelector("#listaEmpleados");
         if (!miLista) {
             miLista = document.createElement("ul");
-            miLista.setAttribute("id", "listaUsuarios");
+            miLista.setAttribute("id", "listaEmpleados");
         }
         miLista.innerHTML = "";
 
 
-        usuarios.forEach((usuario) => {
+        empleados.forEach((empleado) => {
             const nodoli = document.createElement("li");
-            nodoli.innerHTML = `${usuario.nombre} ${usuario.apellido}`;
+            nodoli.innerHTML = `${empleado.nombre} ${empleado.apellido}`;
             miLista.appendChild(nodoli);
         });
 
         document.body.appendChild(miLista);
     }
 
-    function eliminarUsuario() {
-        let nombre = prompt("Ingrese nombre del usuario a eliminar")
+    function eliminarEmpleado() {
+        let nombre = prompt("Ingrese nombre del empleado a eliminar")
 
-        let encontrado = usuarios.find((usuario) => usuario.nombre === nombre)
+        let encontrado = empleados.find((empleado) => empleado.nombre === nombre)
 
         if (!encontrado) {
-            alert("Usuario no encontrado")
+            alert("Empleado no encontrado")
         } else {
-            let index = usuarios.indexOf(encontrado)
-            usuarios.splice(index, 1)
-            console.log("borrar usuarios")
-            console.log(usuarios);
+            let index = empleados.indexOf(encontrado)
+            empleados.splice(index, 1)
+            console.log("borrar empleados")
+            console.log(empleados);
         }
 
         console.log("Se encontró para borrar", encontrado);
     }
-    console.log("Estos son sus usuarios")
-    console.log(usuarios);
+    console.log("Estos son sus empleados")
+    console.log(empleados);
 }
