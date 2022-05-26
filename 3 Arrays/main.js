@@ -36,5 +36,9 @@ function agregarEmpleado(){
     empleados.push(empleado)
 }
 
+function listarUsuarios(){
+    listarUsuarios.forEach
+}
+
 console.log(empleados);
 mostrarMenu()
