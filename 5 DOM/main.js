@@ -6,19 +6,20 @@ saludo.innerHTML = `<b>¡Hola, ${nombre} ${apellido}!</b>`
 
 
 class Empleado {
-    constructor(nombre, apellido, edad, ciudad) {
-        this.nombre = nombre
-        this.apellido = apellido
-        this.edad = edad
-        this.ciudad = ciudad
+    constructor(id, nombre, apellido, edad, ciudad) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+        this.ciudad = ciudad;
     }
 }
 
-const empleado1 = new Empleado("Analia", "Morales", 24, "Villa Lynch");
-const empleado2 = new Empleado("Noelia Melina", "Lopez", 20, "Villa del Parque");
-const empleado3 = new Empleado("Florencia", "Gomez", 21, "Villa Devoto");
+const empleado1 = new Empleado("1", "Analia", "Morales", 24, "Villa Lynch");
+const empleado2 = new Empleado("2", "Noelia Melina", "Lopez", 20, "Villa del Parque");
+const empleado3 = new Empleado("3", "Florencia", "Gomez", 21, "Villa Devoto");
 
-const boton1 = document.getElementById("listado");
+const boton1 = document.getElementById("menu");
 boton1 = addEventListener("click", () =>{
     listadoEmpleados();
 })
@@ -60,11 +61,12 @@ function listadoEmpleados() {
     }
 
     function agregarEmpleado() {
+        let id = Number(prompt("Ingrese ID del empleado"))
         let nombre = prompt("Ingrese su nombre")
         let apellido = prompt("Ingrese su apellido")
-        let edad = prompt("Ingrese su edad")
+        let edad = Number(prompt("Ingrese su edad"))
         let ciudad = prompt("Ingrese su ciudad")
-        let empleado = new Empleado(nombre, apellido, edad, ciudad)
+        let empleado = new Empleado(id, nombre, apellido, edad, ciudad)
         empleados.push(empleado)
     }
 
@@ -73,13 +75,16 @@ function listadoEmpleados() {
         if (!miLista) {
             miLista = document.createElement("ul");
             miLista.setAttribute("id", "listaEmpleados");
+            miLista.style.textAlign = 'center'
+            miLista.style.listStyle = 'none'
+            miLista.style.margin = '2em'
         }
         miLista.innerHTML = "";
 
 
         empleados.forEach((empleado) => {
             const nodoli = document.createElement("li");
-            nodoli.innerHTML = `${empleado.nombre} ${empleado.apellido}`;
+            nodoli.innerHTML = `${empleado.id} ${empleado.nombre} ${empleado.apellido} ${empleado.edad} ${empleado.ciudad}`;
             miLista.appendChild(nodoli);
         });
 
@@ -87,9 +92,9 @@ function listadoEmpleados() {
     }
 
     function eliminarEmpleado() {
-        let nombre = prompt("Ingrese nombre del empleado a eliminar")
+        let id = prompt("Ingrese ID del empleado a eliminar")
 
-        let encontrado = empleados.find((empleado) => empleado.nombre === nombre)
+        let encontrado = empleados.find((empleado) => empleado.id === id)
 
         if (!encontrado) {
             alert("Empleado no encontrado")
