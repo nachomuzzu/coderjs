@@ -18,6 +18,11 @@ const empleado1 = new Empleado("Analia", "Morales", 24, "Villa Lynch");
 const empleado2 = new Empleado("Noelia Melina", "Lopez", 20, "Villa del Parque");
 const empleado3 = new Empleado("Florencia", "Gomez", 21, "Villa Devoto");
 
+const boton1 = document.getElementById("listado");
+boton1 = addEventListener("click", () =>{
+    listadoEmpleados();
+})
+
 function listadoEmpleados() {
 
     let empleados = [empleado1, empleado2, empleado3]
