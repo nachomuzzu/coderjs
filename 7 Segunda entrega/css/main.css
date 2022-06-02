@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Roboto:wght@300;400&display=swap");
+.navbar {
+  background-color: #171717;
+  font-size: 1.5em; }
+
+.nav-item {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2em; }
+
+.underline {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+  background-size: 0 3px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size .5s ease-in-out; }
+
+.underline-black {
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#31dab5, #31dab5); }
+
+.underline:hover {
+  background-size: 100% 3px;
+  background-position: 0 100%; }
+
+html, .body {
+  background-color: #444343;
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif; }
+
+.hero {
+  background-color: #333333; }
+
+.jumbotron {
+  background-color: #333333; }
+
+.btnBg {
+  background-color: #31dab5 !important; }
+  .btnBg:hover {
+    background-color: #448f7f !important; }
+
+.card {
+  background-color: #171717 !important; }
+
+.colorLinks {
+  color: #31dab5; }
+
+.alerta {
+  background-color: #444343;
+  height: 3vh; }
+
+.formulario {
+  background-color: #333333;
+  height: 52vh; }
+
+textarea {
+  resize: none;
+  height: 10vh; }
+
+.lead {
+  line-height: 2em; }
+
+.content {
+  line-height: 1.3em; }
+
+.bg-footer {
+  background-color: #171717; }
+
+@media screen and (max-width: 288px) {
+  .formulario {
+    height: 60vh; } }
