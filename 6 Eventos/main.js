@@ -1,6 +1,3 @@
-const listado = document.getElementById("listado")
-
-
 
 class Empleado {
     constructor(id, nombre, apellido, edad, ciudad) {
@@ -19,30 +16,35 @@ const empleado3 = new Empleado("3", "Florencia", "Gomez", 21, "Villa Devoto");
 let empleados = [empleado1, empleado2, empleado3]
 
 // Botones
- const boton1 = document.getElementById("agregar");
- boton1.addEventListener("click", () => {
-     agregarEmpleado();
- })
- const boton2 = document.getElementById("eliminar");
- boton2.addEventListener("click", () => {
-     eliminarEmpleado()
- })
- const boton3 = document.getElementById("listar");
- boton3.addEventListener("click", () => {
-     listarEmpleados();
- })
+const boton1 = document.getElementById("agregar");
+boton1.addEventListener("click", () => {
+    agregarEmpleado();
+})
+const boton2 = document.getElementById("eliminar");
+boton2.addEventListener("click", () => {
+    eliminarEmpleado()
+})
+const boton3 = document.getElementById("listar");
+boton3.addEventListener("click", () => {
+    listarEmpleados();
+})
 
 
 function agregarEmpleado() {
-    let id = Number(prompt("Ingrese ID del empleado"))
-    let nombre = prompt("Ingrese nombre del empleado")
-    let apellido = prompt("Ingrese apellido del empleado")
-    let edad = Number(prompt("Ingrese edad del empleado"))
-    let ciudad = prompt("Ingrese ciudad del empleado")
-    let empleado = new Empleado(id, nombre, apellido, edad, ciudad)
-    empleados.push(empleado)
-}
+    let id = 0;
+    if (empleados.length > 0) {
+        id = empleados[empleados.length - 1].id++;
+    }
 
+    let nombre = prompt("Ingrese un nombre");
+    let apellido = prompt("Ingrese un apellido");
+    let años = Number(prompt("Ingrese una edad"));
+    let ciudad = prompt("Ingrese un ciudad");
+    let empleado = new Empleado(id, nombre, apellido, años, ciudad);
+
+    empleados.push(empleado);
+    listarEmpleados()
+}
 function listarEmpleados() {
     let miLista = document.querySelector("#listaEmpleados");
     if (!miLista) {
@@ -65,20 +67,16 @@ function listarEmpleados() {
 }
 
 function eliminarEmpleado() {
-    let id = prompt("Ingrese ID del empleado a eliminar")
 
-    let encontrado = empleados.find((empleado) => empleado.id === id)
+    let id = Number(prompt("Ingrese ID del empleado a eliminar"));
+    let encontrado = empleados.find((empleado) => empleado.id === id);
 
     if (!encontrado) {
-        alert("Empleado no encontrado")
-    } else {
-        let index = empleados.indexOf(encontrado)
-        empleados.splice(index, 1)
-        console.log("borrar empleados")
-        console.log(empleados);
-        listarEmpleados()
+        alert("Empleado no encontrado");
     }
-
-    console.log("Se encontró para borrar", encontrado);
+    else {
+        let index = empleados.indexOf(encontrado);
+        empleados.splice(index, 1);
+    }
+    listarEmpleados()
 }
-

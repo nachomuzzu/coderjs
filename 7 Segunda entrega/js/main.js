@@ -8,7 +8,7 @@ let items = [
   
   items.forEach(p => {
     content += `
-      <div id="keyBoard" class="col-md-4 mt-2">
+      <div id="container" class="col-md-4 mt-2">
                 <div class="card" style="width: 90%;">
                     <img src="${p[3]}" class="card-img-top img-fluid" alt="celular roto">
                     <div class="card-body text-white">
