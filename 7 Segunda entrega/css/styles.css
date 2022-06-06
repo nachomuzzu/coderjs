@@ -1,0 +1,63 @@
+		.btnBg{
+			background-color: #880000 !important; 
+			color: white !important;
+		}
+
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #1c1d27 !important;
+		}
+
+		.cEF_table {
+			width: 100%;
+			text-align: center;
+			background: #121317;
+			color: white;
+			font-size: 14px;
+			border-radius: 15px;
+		}
+
+		.cEF_table td {
+			padding: 10px;
+			border: none;
+		}
+
+		.cEF_table tr:nth-child(2n) {
+			background: #13141b;
+		}
+
+		.cEF_table tr:hover {
+			background: #1D1E23;
+		}
+
+		.cEF_table tr:first-child {
+			font-weight: bold;
+		}
+
+		.cEF_table tr:last-child {
+			border-radius: 0 0 15px 15px;
+		}
+
+		.cEF_table tr:first-child:hover {
+			background: #121317;
+		}
+
+		.cEF_table tr:first-child:hover td:first-child {
+			border-radius: 15px 0 0 0;
+		}
+
+		.cEF_table tr:first-child:hover td:last-child {
+			border-radius: 0 15px 0 0;
+		}
+
+		.cEF_table tr:last-child td:first-child,
+		.cEF_table tr:last-child:hover td:first-child {
+			border-radius: 0 0 0 15px;
+		}
+
+		.cEF_table tr:last-child td:last-child,
+		.cEF_table tr:last-child:hover td:last-child {
+			border-radius: 0 0 15px 0;
+		}

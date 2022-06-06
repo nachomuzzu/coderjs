@@ -1,179 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CeluStore - Servicio Técnico</title>
-    <link rel="stylesheet" href="css/main.css">
-    <script defer src="js/main.js"></script>
-    <!-- link bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<title>eP JSON to HTML Table</title>
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+	</script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/styles.css">
+		<script defer src="js/main.js"></script>
 </head>
 
-<!-- inicia body -->
-<body id="home">
-  <div class="alerta text-center text-white mb-0 py-3 px-2 d-flex align-items-center justify-content-center" role="alert">
-    Lorem ipsum dolor sit amet</div>
-    <!-- inicia nav -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-      <a class="navbar-brand px-3" href="#home">
-        <img class="me-2" src="img/phone.svg" alt="Logo CeluStore">CeluStore</a>
-      <button class="navbar-toggler me-4" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbar">
-        <div class="navbar-nav ms-auto px-3">
-          <a class="nav-item nav-link active underline underline-black" href="#home">Home</a>
-          <a class="nav-item nav-link underline underline-black" href="#servicios">Servicios</a>
-          <a class="nav-item nav-link underline underline-black" href="#contacto">Contacto</a>
-          <a class="nav-item nav-link underline underline-black" href="#acerca">Acerca</a>
 
-        </div>
-      </div>
-    </nav>
-    <!-- termina nav  -->
-<!-- inicia jumbotron -->
-<div class="body">
-    <div class="jumbotron text-white py-5 px-5">
-      <h1 class="display-4">¿Tu celular funciona mal? ¡Traelo a CeluStore!</h1>
-      <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, nostrum provident?</p>
-      <hr class="my-4">
-      <p>Ipsa dolor molestiae odit inventore nam quos</p>
-      <p class="lead">
-        <a class="btn btnBg btn-lg" href="#servicios" role="button">VER MÁS</a>
-      </p>
-    </div>
-    <!-- termina jumbotron -->
-  
-    <!-- inicia card -->
-    <div class="container" id="servicios">
-      <div class="row d-flex justify-content-center px-5 my-3" id="shop">
-      </div>
-    </div>
-  <!-- termina card  -->
-  <!-- inicia contacto -->
-<div class="row d-flex px-4 py-4" id="contacto">
-  <iframe class="col-md-6 col-lg-6 mt-3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.6664045582565!2d-58.45880938477156!3d-34.562000880470265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5d3849c3221%3A0xc8999711cc581a5b!2sAv.%20Cabildo%20%26%20Av.%20Juramento%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1650781678922!5m2!1ses-419!2sar" width="600" height="500" style="border:none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <form class="col-md-6 col-lg-6 mt-3 ms-auto mb-5 formulario text-white py-3 border border-dark rounded">
-      <h3 class="d-flex justify-content-center">¿Nos querés contactar?</h3>
-        <div class="form-group">
-          <label for="input">Correo electrónico</label>
-          <input type="email" class="form-control" id="email" placeholder="Ingresa tu email">
-          <small id="emailHelp" class="form-text text-muted">No compartiremos tu email con nadie.</small>
-        </div>
-     <div class="form-group">
-      <label for="input">Nombre y apellido</label>
-      <input type="email" class="form-control" id="email" placeholder="Ingresa tu nombre y apellido">
-    </div>
-    <label class="mt-2" for="input">Ingrese su consulta</label>
-     <textarea class="w-100" name="consulta" id="consulta" cols="10" rows="5">
 
-     </textarea>
-     <button type="submit" class="btn btnBg w-100 my-2">Enviar</button>
-     <button type="reset" class="btn bg-black text-white w-100 mb-4">Cancelar</button>
-
-  </form>
+<body>
+	<h3 class="text-center text-white mt-2">
+		1. Añadir JSON Array a la variable mapData en main.js linea 3</br>
+		2. Apretar el botón
+	</h3>
+	<div class="text-center">
+	<button class="btn btnBg my-3"onclick='tableFromJson()'>CREAR TABLA USANDO JSON</button>
 </div>
-    <!-- termina contacto -->
-  
-<!-- inicia acerca -->
-<div class="jumbotron jumbotron-fluid text-white py-5 px-5" id="acerca">
-  <div class="container">
-    <h1 class="display-4">Acerca de nosotros</h1>
-    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste veniam fuga dolore eum, labore qui quos officiis adipisci libero ea laborum repellendus placeat recusandae amet vero natus, optio iusto inventore!</p>
-    <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur sed tempore vitae, corrupti excepturi perspiciatis ea similique aperiam odit accusamus harum deleniti iste iure illum! Sed itaque vel ullam porro!</p>
-  </div>
-</div>
-<!-- termina acerca -->
+	<p id='showData'></p>
+	<p class="text-white text-center" id='msg'></p>
+</body>
 
-<!-- inicia footer -->
-<!-- Footer -->
-<footer class="page-footer font-small blue pt-4 bg-footer text-white">
+<script>
 
-  <!-- Footer Links -->
-  <div class="container-fluid text-center text-md-left">
 
-    <!-- Grid row -->
-    <div class="row">
+</script>
 
-      <!-- Grid column -->
-      <div class="col-md-6 mt-md-0 mt-3">
-
-        <!-- Content -->
-        <h5 class="text-uppercase">Footer Content</h5>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium quibusdam quod quo consequatur recusandae quidem voluptas asperiores eligendi tempora, assumenda ab, deleniti id quia ut aut quisquam necessitatibus cumque qui.</p>
-
-      </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none pb-3">
-
-      <!-- Grid column -->
-      <div class="col-md-3 mb-md-0 mb-3">
-
-        <!-- Links -->
-        <h5 class="text-uppercase">Links</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!" class="colorLinks">Link 1</a>
-          </li>
-          <li>
-            <a href="#!" class="colorLinks">Link 2</a>
-          </li>
-          <li>
-            <a href="#!" class="colorLinks">Link 3</a>
-          </li>
-          <li>
-            <a href="#!" class="colorLinks">Link 4</a>
-          </li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="col-md-3 mb-md-0 mb-3">
-
-        <!-- Links -->
-        <h5 class="text-uppercase">Links</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!" class="colorLinks">Link 1</a>
-          </li>
-          <li>
-            <a href="#!" class="colorLinks">Link 2</a>
-          </li>
-          <li>
-            <a href="#!" class="colorLinks">Link 3</a>
-          </li>
-          <li>
-            <a href="#!" class="colorLinks">Link 4</a>
-          </li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-    </div>
-    <!-- Grid row -->
-
-  </div>
-  <!-- Footer Links -->
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2022 Copyright:
-    <a href="/"  class="colorLinks"> celustore.com</a>
-  </div>
-  <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
-<!-- termina footer -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
 </html>

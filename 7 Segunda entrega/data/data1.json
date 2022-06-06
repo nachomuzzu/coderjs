@@ -1,13 +1,11 @@
-	function tableFromJson() {
-
-		let mapData = [[
+	[
 			"1. Bc ft. SebastiaN - Bang Bang",
 			"XpR 3, eP 4",
 			"Narumiya'eP! (3)",
 			"XpRRon (2)",
 			"PCHZYeP! (1)",
 			"XpRNaval (1)"
-		],
+		]
 		[
 			"2. Gteatero - Insidious Deeps II",
 			"XpR 5, eP 10",
@@ -159,41 +157,3 @@
 			"Narumiya'eP! (20)",
 			"ToXa^|eP! (7)"
 		]
-		]
-
-		let col = [];
-		for (let i = 0; i < mapData.length; i++) {
-			for (let key in mapData[i]) {
-				if (col.indexOf(key) === -1) {
-					col.push(key);
-				}
-			}
-		}
-
-		let table = document.createElement("table");
-		table.setAttribute('class', 'cEF_table')
-
-		let tr = table.insertRow(-1);                   
-
-		for (let i = 0; i < col.length; i++) {
-			let th = document.createElement("th");      
-			th.innerHTML = col[i];
-			tr.appendChild(th);
-		}
-
-		
-		for (let i = 0; i < mapData.length; i++) {
-
-			tr = table.insertRow(-1);
-
-			for (let j = 0; j < col.length; j++) {
-				let tabCell = tr.insertCell(-1);
-				tabCell.innerHTML = mapData[i][col[j]];
-			}
-		}
-
-		let divShowData = document.getElementById('showData');
-		divShowData.innerHTML = "";
-		divShowData.appendChild(table);
-
-	}
