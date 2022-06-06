@@ -197,3 +197,8 @@
 		divShowData.appendChild(table);
 
 	}
+
+	let button = document.getElementById("button");
+	button = document.addEventListener("click", () => {
+		tableFromJson();
+	})
