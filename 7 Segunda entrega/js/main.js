@@ -173,18 +173,19 @@ function tableFromJson() {
 	let table = document.createElement("table");
 	table.setAttribute('class', 'cEF_table')
 
-	let tr = table.insertRow(-1);
+	let tr = table.insertRow(-1);                //fila 
 
 	for (let i = 0; i < col.length; i++) {
-		let th = document.createElement("th");
+		let th = document.createElement("th");  //header
 		th.innerHTML = col[i];
 		tr.appendChild(th);
 	}
 
-
+	//Añadir data del json como filas
+	
 	for (let i = 0; i < mapData.length; i++) {
 
-		tr = table.insertRow(-1);
+		tr = table.insertRow(-1);                
 
 		for (let j = 0; j < col.length; j++) {
 			let tabCell = tr.insertCell(-1);

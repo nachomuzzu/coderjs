@@ -11,12 +11,14 @@
 		}
 
 		.cEF_table {
-			width: 100%;
+			width: 98%;
 			text-align: center;
 			background: #121317;
 			color: white;
 			font-size: 14px;
 			border-radius: 15px;
+			margin-left: 1em;
+			margin-right: 1em;
 		}
 
 		.cEF_table td {
