@@ -1,6 +1,6 @@
 function tableFromJson() {
 
-	fetch("./data/data3.json")
+	fetch("./data/data1.json")
 		.then(response => response.json())
 		.then(data => {
 			
